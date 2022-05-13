@@ -35,11 +35,12 @@
       if (val == null) {
         google.accounts.id.initialize({
           client_id: "864680086079-1rffec4fmn2ceutllo528517i5jr3aae.apps.googleusercontent.com",
-          callback: handleCredentialResponse
+          callback: handleCredentialResponse,
+          cancel_on_tap_outside: false
         });
         google.accounts.id.renderButton(
           document.getElementById("gButton"),
-          { theme: "outline", size: "large" }  // customization attributes
+          { theme: "filled_blue", size: "large"}  // customization attributes
         );
         google.accounts.id.prompt(); // also display the One Tap dialog
       }

@@ -22,7 +22,7 @@ function Auth() {
                             <div id="user-profile-display" class="col-md-4">
                                 <address id="user-profile-details">
                                 </address>
-                                <button type="button" class="btn btn-outline-primary btn-sm" onclick="signOut()">
+                                <button type="button" class="btn btn-outline-primary btn-sm" onClick={signOut}>
                                     Sign-Out
                                 </button>
                             </div>
@@ -78,9 +78,11 @@ function Auth() {
                             </p>
                         </div>
                         <div class="row">
-                            <div class="col-md-12">
+                            <div class='col-md-5'/>
+                            <div class="col-md-1">
                                 <div id="gButton" />
                             </div>
+                            <div class='col-md-6'/>
                         </div>
                     </div>
                 </div>
@@ -89,4 +91,8 @@ function Auth() {
     }
 }
 
+function signOut() {
+    sessionStorage.removeItem('gTokenDigiSafe');
+    window.location.href = 'index.html';
+}
 export default Auth;
