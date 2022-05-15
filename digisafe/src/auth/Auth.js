@@ -1,5 +1,7 @@
 import './Auth.css';
 import React from 'react';
+import HomePage from '../home_page/home.js'
+import Address from './address';
 
 function Auth() {
     let gToken = sessionStorage.getItem('gTokenDigiSafe');
@@ -20,49 +22,32 @@ function Auth() {
                                 </div>
                             </div>
                             <div id="user-profile-display" class="col-md-4">
-                                <address id="user-profile-details">
-                                </address>
-                                <button type="button" class="btn btn-outline-primary btn-sm" onClick={signOut}>
+                                <Address jwt={gToken}></Address>
+                                <button type="button" class="btn btn-outline-primary btn-md" onClick={signOut}>
                                     Sign-Out
                                 </button>
                             </div>
                         </div>
                     </div>
-                    <nav>
-                        <ol class="breadcrumb">
-                            <li class="breadcrumb-item active">
-                                Home
-                            </li>
-                            <li class="breadcrumb-item">
-                                <a href="./pm.html">Password Manager</a>
-                            </li>
-                        </ol>
-                    </nav>
-                    <div class="row">
-                        <div class="col-md-12">
-                            <table id="user_summary" class="table table-bordered table-sm">
-                                <thead>
-                                    <tr>
-                                        <th>
-                                            Username
-                                        </th>
-                                        <th>
-                                            No. saved passwords
-                                        </th>
-                                        <th>
-                                            Last Accessed
-                                        </th>
-                                        <th>
-                                            Last Modified
-                                        </th>
-                                    </tr>
-                                    <td id="stats_data"></td>
-                                </thead>
-                            </table>
-                        </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <nav>
+                            <ol class="breadcrumb btn-group btn-group-toggle" data-toggle="buttons">
+                                <li class="breadcrumb-item active">
+                                    <button href="#" class="btn btn-info active" aria-disabled="true">Home</button>
+                                </li>
+                                <li class="breadcrumb-item">
+                                    {/* <button href="#" class="btn btn-info" role="button" aria-disabled="true" className='PM' onClick={this.loadPm(gToken)}>Password Manager</button> */}
+                                </li>
+                            </ol>
+                        </nav>
                     </div>
                 </div>
-            </div >
+                <div class="row">
+                    <HomePage jwt={gToken}></HomePage>    
+                </div>
+            </div>
         );
     } else {
         return (
@@ -78,11 +63,11 @@ function Auth() {
                             </p>
                         </div>
                         <div class="row">
-                            <div class='col-md-5'/>
+                            <div class='col-md-5' />
                             <div class="col-md-1">
                                 <div id="gButton" />
                             </div>
-                            <div class='col-md-6'/>
+                            <div class='col-md-6' />
                         </div>
                     </div>
                 </div>
