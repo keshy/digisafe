@@ -20,10 +20,10 @@ jobs:
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     steps:
-    - name: check in into digisafe directory
-    - run: cd digisage/
     
-    - uses: actions/checkout@v3
+    - name: check in into digisafe directory
+      run: cd digisage/
+    
     - name: Build and test react app ${{ matrix.node-version }}
       uses: actions/setup-node@v3
       with:
