@@ -1,6 +1,6 @@
 import './Auth.css';
 import React from 'react';
-import HomePage from '../home_page/home.js'
+//import HomePage from '../home_page/home.js'
 import Address from './address';
 import TabFlipper from '../tab_flipper/tab_flipper.js';
 
@@ -84,6 +84,6 @@ function signOut() {
 }
 export default Auth;
 
-function flipTabs(domain) {
-
-}
+//function flipTabs(domain) {
+//
+//}
