@@ -20,6 +20,8 @@ jobs:
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     steps:
+    - name: Checkout
+      uses: actions/checkout@v2.4.2
     
     - name: check in into digisafe directory
       run: cd digisage/
