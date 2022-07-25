@@ -24,7 +24,7 @@ jobs:
       uses: actions/checkout@v2.4.2
     
     - name: check in into digisafe directory
-      run: cd digisage/
+      run: cd digisafe/
     
     - name: Build and test react app ${{ matrix.node-version }}
       uses: actions/setup-node@v3
