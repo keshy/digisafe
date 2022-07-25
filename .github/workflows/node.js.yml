@@ -23,16 +23,12 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v2.4.2
     
-    - name: check in into digisafe directory
-      run: | 
-        cd digisafe/
-        ls 
-    
     - name: Build and test react app ${{ matrix.node-version }}
       uses: actions/setup-node@v3
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
+        cache-dependency-path: digisafe/package-lock.json
     - run: npm ci
       working-directory: './digisafe'
     - run: npm run build --if-present
