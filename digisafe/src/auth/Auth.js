@@ -2,6 +2,7 @@ import './Auth.css';
 import React from 'react';
 import HomePage from '../home_page/home.js'
 import Address from './address';
+import TabFlipper from './tab_flipper/tab_flipper.js'
 
 function Auth() {
     let gToken = sessionStorage.getItem('gTokenDigiSafe');
@@ -44,7 +45,7 @@ function Auth() {
                         </nav>
                     </div>
                 </div>
-                <TabFlipper props
+                <TabFlipper props/>
                 <div id='tab-loader' className="row">
 
                 </div>

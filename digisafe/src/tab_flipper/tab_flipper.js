@@ -13,6 +13,4 @@ class TabFlipper extends React.Component {
     render () {
 
     }
-
-
 }
