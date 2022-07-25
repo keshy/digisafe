@@ -1,4 +1,5 @@
 *.puml
 .*
 venv/*
-*/node_modules*
+digisafe/node_modules*
+digisafe/build*
