@@ -2,7 +2,7 @@ import './Auth.css';
 import React from 'react';
 import HomePage from '../home_page/home.js'
 import Address from './address';
-import TabFlipper from './tab_flipper/tab_flipper.js'
+import TabFlipper from '../tab_flipper/tab_flipper.js';
 
 function Auth() {
     let gToken = sessionStorage.getItem('gTokenDigiSafe');
@@ -85,5 +85,5 @@ function signOut() {
 export default Auth;
 
 function flipTabs(domain) {
-<HomePage jwt={gToken}></HomePage>
+
 }
