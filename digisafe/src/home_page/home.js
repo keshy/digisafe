@@ -23,9 +23,9 @@ class HomePage extends React.Component {
 
     render() {
         return (
-            <div class="row">
-                <div class="col-md-12">
-                    <table id="user_summary" class="table table-bordered table-sm">
+            <div className="row">
+                <div className="col-md-12">
+                    <table id="user_summary" className="table table-bordered table-sm">
                         <thead>
                             <tr>
                                 <th>

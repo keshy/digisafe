@@ -7,13 +7,13 @@ function Auth() {
     let gToken = sessionStorage.getItem('gTokenDigiSafe');
     if (gToken) {
         return (
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="row">
-                            <div class="col-md-8">
-                                <div class="jumbotron">
-                                    <h3 class="text-left">
+            <div className="container-fluid">
+                <div className="row">
+                    <div className="col-md-12">
+                        <div className="row">
+                            <div className="col-md-8">
+                                <div className="jumbotron">
+                                    <h3 className="text-left">
                                         Brindavanam
                                     </h3>
                                     <p>
@@ -21,53 +21,54 @@ function Auth() {
                                     </p>
                                 </div>
                             </div>
-                            <div id="user-profile-display" class="col-md-4">
+                            <div id="user-profile-display" className="col-md-4">
                                 <Address jwt={gToken}></Address>
-                                <button type="button" class="btn btn-outline-primary btn-md" onClick={signOut}>
+                                <button type="button" className="btn btn-outline-primary btn-md" onClick={signOut}>
                                     Sign-Out
                                 </button>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col-md-12">
+                <div className="row">
+                    <div className="col-md-12">
                         <nav>
-                            <ol class="breadcrumb btn-group btn-group-toggle" data-toggle="buttons">
-                                <li class="breadcrumb-item active">
-                                    <button href="#" class="btn btn-info active" aria-disabled="true">Home</button>
+                            <ol className="breadcrumb btn-group btn-group-toggle" data-toggle="buttons">
+                                <li className="breadcrumb-item active">
+                                    <button href="#" className="btn btn-info active" aria-disabled="false">Home</button>
                                 </li>
-                                <li class="breadcrumb-item">
-                                    {/* <button href="#" class="btn btn-info" role="button" aria-disabled="true" className='PM' onClick={this.loadPm(gToken)}>Password Manager</button> */}
+                                <li className="breadcrumb-item">
+                                    <button href="#" className="btn btn-info" aria-disabled="true">Password Manager</button>
                                 </li>
                             </ol>
                         </nav>
                     </div>
                 </div>
-                <div class="row">
-                    <HomePage jwt={gToken}></HomePage>    
+                <TabFlipper props
+                <div id='tab-loader' className="row">
+
                 </div>
             </div>
         );
     } else {
         return (
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="jumbotron" align-items="center">
-                            <h3 class="text-center">
+            <div className="container-fluid">
+                <div className="row">
+                    <div className="col-md-12">
+                        <div className="jumbotron" align-items="center">
+                            <h3 className="text-center">
                                 Brindavanam
                             </h3>
-                            <p class="text-center">
+                            <p className="text-center">
                                 A private virtual infrastructure for maintaining and sharing sensitive data.
                             </p>
                         </div>
-                        <div class="row">
-                            <div class='col-md-5' />
-                            <div class="col-md-1">
+                        <div className="row">
+                            <div className='col-md-5' />
+                            <div className="col-md-1">
                                 <div id="gButton" />
                             </div>
-                            <div class='col-md-6' />
+                            <div className='col-md-6' />
                         </div>
                     </div>
                 </div>
@@ -81,3 +82,7 @@ function signOut() {
     window.location.href = 'index.html';
 }
 export default Auth;
+
+function flipTabs(domain) {
+<HomePage jwt={gToken}></HomePage>
+}

@@ -1,3 +1,4 @@
 *.puml
 .*
 venv/*
+*/node_modules*

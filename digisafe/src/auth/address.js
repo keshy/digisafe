@@ -12,12 +12,12 @@ class Address extends React.Component {
 
     render() {
         return (
-            <div class="row">
-                <div class="col-md-12">
-                    <img src={this.state.jwt.picture}></img>
+            <div className="row">
+                <div className="col-md-12">
+                    <img alt='profile' src={this.state.jwt.picture}></img>
                 </div>
-                <div class="row">
-                    <div class="col-md-12">
+                <div className="row">
+                    <div className="col-md-12">
                         <p>{this.state.jwt.name}</p>
                     </div>
                 </div>
