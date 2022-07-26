@@ -1,8 +1,8 @@
 import './Auth.css';
 import React from 'react';
-//import HomePage from '../home_page/home.js'
 import Address from './address';
-import TabFlipper from '../tab_flipper/tab_flipper.js';
+import TabContent from '../tab_flipper/tab_content.js';
+
 
 function Auth() {
     let gToken = sessionStorage.getItem('gTokenDigiSafe');
@@ -12,17 +12,17 @@ function Auth() {
                 <div className="row">
                     <div className="col-md-12">
                         <div className="row">
-                            <div className="col-md-8">
+                            <div className="col-md-10">
                                 <div className="jumbotron">
-                                    <h3 className="text-left">
+                                    <h3 className="text-center">
                                         Brindavanam
                                     </h3>
-                                    <p>
+                                    <p className="text-center">
                                         A private virtual infrastructure for maintaining private data.
                                     </p>
                                 </div>
                             </div>
-                            <div id="user-profile-display" className="col-md-4">
+                            <div id="user-profile-display" className="col-md-2">
                                 <Address jwt={gToken}></Address>
                                 <button type="button" className="btn btn-outline-primary btn-md" onClick={signOut}>
                                     Sign-Out
@@ -31,24 +31,7 @@ function Auth() {
                         </div>
                     </div>
                 </div>
-                <div className="row">
-                    <div className="col-md-12">
-                        <nav>
-                            <ol className="breadcrumb btn-group btn-group-toggle" data-toggle="buttons">
-                                <li className="breadcrumb-item active">
-                                    <button href="#" className="btn btn-info active" aria-disabled="false">Home</button>
-                                </li>
-                                <li className="breadcrumb-item">
-                                    <button href="#" className="btn btn-info" aria-disabled="true">Password Manager</button>
-                                </li>
-                            </ol>
-                        </nav>
-                    </div>
-                </div>
-                <TabFlipper props/>
-                <div id='tab-loader' className="row">
-
-                </div>
+                <TabContent jwt={gToken}></TabContent>
             </div>
         );
     } else {
@@ -84,6 +67,3 @@ function signOut() {
 }
 export default Auth;
 
-//function flipTabs(domain) {
-//
-//}
